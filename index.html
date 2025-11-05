@@ -209,8 +209,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"Dame un perfil de los jóvenes de 18 a 29 años."`</li>
-                <li>`"Top 5 colonias con más adultos mayores de 65."`</li>
+                <li>`"Cuántas personas jóvenes de 18 a 29 años."`</li>
+                <li>`"Colonias con más adultos mayores de 65."`</li>
                 <li>`"¿Cuál es la edad promedio de la población?"`</li>
             </ul>
         </div>
@@ -228,8 +228,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuál es la principal carencia de los adultos mayores en [Colonia]?"`</li>
-                <li>`"¿Cuántas personas tienen rezago educativo en el AGEB [Número]?"`</li>
+                <li>`"¿Carencia seguridad social en la colonia Desarrollo Urbano?"`</li>
+                <li>`"¿Personas con rezago educativo en el AGEB 12305?"`</li>
             </ul>
         </div>
 
@@ -248,8 +248,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuántas personas con carencia de salud no son elegibles para IMSS Bienestar?"`</li>
-                <li>`"Adultos mayores de 65 años sin acceso a pensión."`</li>
+                <li>`"¿Personas elegibles para IMSS Bienestar en colonia Golondrinas?"`</li>
+                <li>`"Personas elegibles a Pensión Mujeres Bienestar."`</li>
             </ul>
         </div>
 
@@ -267,8 +267,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuántos niños tienen 2 o más carencias?"`</li>
-                <li>`"Dame un perfil de las personas con 3 carencias."`</li>
+                <li>`"¿Cuántos niños tienen 3 o más carencias?"`</li>
+                <li>`"Personas con 3 carencias."`</li>
                 <li>`"Top colonias por vulnerabilidad extrema."`</li>
             </ul>
         </div>
@@ -287,8 +287,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Qué programa tiene más elegibles en [Colonia]: 'Beca A' o 'Beca B'?"`</li>
-                <li>`"Compara la 'Pensión Adultos Mayores' vs. 'Pensión Mujeres Bienestar'."`</li>
+                <li>`"¿Qué programa tiene más elegibles en Jalalpa Tepito?"`</li>
+                
             </ul>
         </div>
 
@@ -305,7 +305,7 @@
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
                 <li>`"Tabla cruzada de grupos de edad con carencia de salud."`</li>
-                <li>`"Cruce de sexo y rezago educativo."`</li>
+                <li>`"Tabla cruzada por sexo y rezago educativo."`</li>
             </ul>
         </div>
     </div>
@@ -333,13 +333,13 @@
         // Acordeón
         document.addEventListener('DOMContentLoaded', () => {
             const accordionData = [
-                { title: "1. Panorama General (Exploración)", query: `"¿Cuáles son las 10 colonias con más personas registradas?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
-                { title: "2. Enfoque en Grupos Prioritarios", query: `"Dame un perfil de las personas de 65 años o más."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
+                { title: "1. Panorama General (Exploración)", query: `"¿Cuántas personas hay por sexo y edad?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
+                { title: "2. Enfoque en Grupos Prioritarios", query: `"Cuántos niños de 0 a 3 años."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
                 { title: "3. Diagnóstico de Carencias", query: `"De estos adultos mayores, ¿cuál es su principal carencia?"`, purpose: "<strong>Entender el problema:</strong> Ayuda a diagnosticar la naturaleza de la vulnerabilidad (salud, seg. social, etc.) para asignar los recursos correctos." },
-                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Cuántas personas tienen carencia de seguridad social pero NO son elegibles para ningún programa de pensión?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
-                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 2 o 3 carencias al mismo tiempo?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
-                { title: "6. Optimización de Estrategia", query: `"En la colonia X, ¿qué programa tiene más elegibles: 'beca benito juarez' o 'mi beca para empezar'?"`, purpose: "<strong>Uso eficiente de recursos:</strong> Ayuda a decidir qué campaña de difusión o qué programa es más pertinente y tendrá mayor impacto en un territorio específico." },
-                { title: "7. Descubrimiento de Patrones", query: `"Genérame una tabla que cruce los grupos de edad con la carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
+                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Personas de 30 años con carencia de seguridad social pero NO son elegibles para ningún programa?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
+                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 3 carencias sociales?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
+                { title: "6. Optimización de Estrategia", query: `"Personas elegibles a Desde la Cuna en la colonia El Rodeo"`, purpose: "<strong>Uso eficiente de recursos:</strong> Ayuda a decidir qué campaña de difusión o qué programa es más pertinente y tendrá mayor impacto en un territorio específico." },
+                { title: "7. Descubrimiento de Patrones", query: `"Tabla por edad con la carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
             ];
 
             const container = document.getElementById('accordion-container');
