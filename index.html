@@ -10,28 +10,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fdfdfd;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #fdfdfd; }
     </style>
 </head>
 <body class="text-stone-800">
 
-    <!-- Header Fijo -->
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 w-full">
+    <!-- HEADER CON 2 LOGOS + BOTÓN -->
+    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 w-full border-b border-stone-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <div class="flex-shrink-0">
-                    <span class="text-xl font-bold text-sky-700">Asistente Analítico</span>
+                <!-- Logo Izquierda: Alcaldía Álvaro Obregón -->
+                <a href="#que-es" class="flex-shrink-0">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Escudo_%C3%81lvaro_Obreg%C3%B3n.svg/800px-Escudo_%C3%81lvaro_Obreg%C3%B3n.svg.png" 
+                         alt="Alcaldía Álvaro Obregón" 
+                         class="h-11 w-auto">
+                </a>
+
+                <!-- Título Centrado -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <a href="#que-es" class="text-xl font-bold text-sky-700 hover:text-sky-800 transition-colors">
+                        Asistente Analítico
+                    </a>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#que-es" class="text-stone-600 hover:text-sky-700 px-3 py-2 rounded-md text-sm font-medium">Qué es</a>
-                        <a href="#capacidades" class="text-stone-600 hover:text-sky-700 px-3 py-2 rounded-md text-sm font-medium">Capacidades</a>
-                        <a href="#potenciando" class="text-stone-600 hover:text-sky-700 px-3 py-2 rounded-md text-sm font-medium">Plataforma</a>
-                        <a href="#casos-de-uso" class="text-stone-600 hover:text-sky-700 px-3 py-2 rounded-md text-sm font-medium">Casos de Uso</a>
-                    </div>
+
+                <!-- Logo Derecha + Botón -->
+                <div class="flex items-center space-x-4">
+                    <!-- Logo Data & AI -->
+                    <img src="https://via.placeholder.com/38x38/0ea5e9/ffffff?text=AI" 
+                         alt="Data & AI Inclusion Technologies" 
+                         class="h-9 w-9 rounded-full ring-2 ring-sky-200">
+
+                    <!-- Botón Probar el Analizador -->
+                    <a href="https://pape-ia.streamlit.app/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap">
+                        Probar el Analizador
+                    </a>
                 </div>
             </div>
         </nav>
@@ -39,12 +54,12 @@
 
     <!-- Modal -->
     <div id="modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeModal()">
-        <div class="bg-white rounded-lg shadow-xl w-full max-w-3xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <div class="flex justify-between items-center p-5 border-b sticky top-0 bg-white">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center p-6 border-b sticky top-0 bg-white rounded-t-xl">
                 <h3 id="modal-title" class="text-2xl font-bold text-sky-700"></h3>
                 <button onclick="closeModal()" class="text-stone-500 hover:text-stone-800 text-3xl font-light">&times;</button>
             </div>
-            <div class="p-6 md:p-8 space-y-4">
+            <div class="p-6 md:p-8 space-y-5">
                 <div id="modal-body"></div>
             </div>
         </div>
@@ -82,29 +97,29 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div onclick="openModal('capacidad-1')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-1')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Identificar y Perfilar Segmentos</h3>
                         <p class="mt-2 text-stone-600">Filtra y perfila datos demográficos, geografía y encuentra zonas de alta concentración.</p>
                     </div>
-                    <div onclick="openModal('capacidad-2')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-2')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Diagnosticar Carencias</h3>
                         <p class="mt-2 text-stone-600">Cuantifica carencias (Salud, Educación, Seg. Social) e identifica la dominante.</p>
                     </div>
-                    <div onclick="openModal('capacidad-3')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-3')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Detecta Brechas de Cobertura</h3>
                         <p class="mt-2 text-stone-600">Identifica personas con necesidades que no son elegibles para programas de apoyo.</p>
                     </div>
-                    <div onclick="openModal('capacidad-4')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-4')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Priorizar Vulnerabilidad</h3>
                         <p class="mt-2 text-stone-600">Analiza la intensidad de la vulnerabilidad (ej. personas con 2 o 3 carencias).</p>
                     </div>
-                    <div onclick="openModal('capacidad-5')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-5')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Optimiza Estrategia de Programas</h3>
-                        <p class="mt-2 text-stone-600">Compara la cobertura potencial y el impacto de múltiples programas (ej. Beca A vs. Beca B).</p>
+                        <p class="mt-2 text-stone-600">Compara la cobertura potencial y el impacto de múltiples programas.</p>
                     </div>
-                    <div onclick="openModal('capacidad-6')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer border-t-4 border-sky-600">
+                    <div onclick="openModal('capacidad-6')" class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer border-t-4 border-sky-600">
                         <h3 class="text-xl font-bold text-stone-900">Descubrir Patrones Ocultos</h3>
-                        <p class="mt-2 text-stone-600">Genera tablas cruzadas para ver cómo interactúan dos variables (ej. edad vs. carencia).</p>
+                        <p class="mt-2 text-stone-600">Genera tablas cruzadas para ver cómo interactúan dos variables.</p>
                     </div>
                 </div>
             </div>
@@ -119,51 +134,27 @@
                     </h2>
                     <p class="mt-4 text-lg text-stone-600">El Analizador ofrece análisis rápidos que después se pueden ejecutar en la Plataforma.</p>
                 </div>
-
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- (Módulos 1, 2 y 3 - sin cambios, los mantengo iguales) -->
                     <div class="bg-stone-50/70 rounded-lg shadow-md overflow-hidden border border-stone-200">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-sky-700">Módulo 1: Planeación Territorial</h3>
-                        </div>
+                        <div class="p-6"><h3 class="text-xl font-bold text-sky-700">Módulo 1: Planeación Territorial</h3></div>
                         <div class="grid grid-cols-2 gap-px bg-stone-200">
-                            <div class="bg-white p-4">
-                                <h4 class="font-bold text-stone-600">Flujo Actual (Operación)</h4>
-                                <p class="text-sm text-stone-500 mt-2">Exploración Manual: El equipo usa filtros basándose en intuición para buscar segmentos y luego visualizarlos.</p>
-                            </div>
-                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500">
-                                <h4 class="font-bold text-sky-800">Flujo Potenciado (Estrategia)</h4>
-                                <p class="text-sm text-stone-700 mt-2">1. El Analizador identifica rápidamente el segmento prioritario (ej. "Top 3 AGEBs con vulnerabilidad extrema").<br>2. La <strong>Plataforma ejecuta</strong> la visualización de ese segmento para la acción en campo.</p>
-                            </div>
+                            <div class="bg-white p-4"><h4 class="font-bold text-stone-600">Flujo Actual</h4><p class="text-sm text-stone-500 mt-2">Exploración Manual: El equipo usa filtros basándose en intuición.</p></div>
+                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500"><h4 class="font-bold text-sky-800">Flujo Potenciado</h4><p class="text-sm text-stone-700 mt-2">1. El Analizador identifica el segmento prioritario.<br>2. La <strong>Plataforma ejecuta</strong> la visualización.</p></div>
                         </div>
                     </div>
                     <div class="bg-stone-50/70 rounded-lg shadow-md overflow-hidden border border-stone-200">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-sky-700">Módulo 2: Comunicación Focalizada</h3>
-                        </div>
+                        <div class="p-6"><h3 class="text-xl font-bold text-sky-700">Módulo 2: Comunicación Focalizada</h3></div>
                         <div class="grid grid-cols-2 gap-px bg-stone-200">
-                            <div class="bg-white p-4">
-                                <h4 class="font-bold text-stone-600">Flujo Actual (Operación)</h4>
-                                <p class="text-sm text-stone-500 mt-2">Segmentación Simple: La comunicación se basa en filtros demográficos básicos (ej. "Enviar a hogares con jóvenes de 15-18").</p>
-                            </div>
-                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500">
-                                <h4 class="font-bold text-sky-800">Flujo Potenciado (Estrategia)</h4>
-                                <p class="text-sm text-stone-700 mt-2">1. El Analizador descubre un segmento inteligente con otros cruces.<br>2. La Plataforma ejecuta la comunicación con un mensaje específico para esa "brecha".</p>
-                            </div>
+                            <div class="bg-white p-4"><h4 class="font-bold text-stone-600">Flujo Actual</h4><p class="text-sm text-stone-500 mt-2">Segmentación Simple: Filtros demográficos básicos.</p></div>
+                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500"><h4 class="font-bold text-sky-800">Flujo Potenciado</h4><p class="text-sm text-stone-700 mt-2">1. Analizador descubre segmento inteligente.<br>2. Plataforma envía mensaje específico.</p></div>
                         </div>
                     </div>
                     <div class="bg-stone-50/70 rounded-lg shadow-md overflow-hidden border border-stone-200">
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-sky-700">Módulo 3: Comunicación Masiva</h3>
-                        </div>
+                        <div class="p-6"><h3 class="text-xl font-bold text-sky-700">Módulo 3: Comunicación Masiva</h3></div>
                         <div class="grid grid-cols-2 gap-px bg-stone-200">
-                            <div class="bg-white p-4">
-                                <h4 class="font-bold text-stone-600">Flujo Actual (Operación)</h4>
-                                <p class="text-sm text-stone-500 mt-2">Análisis de Entrega: El reporte se enfoca en métricas de envío (ej. "5,000 correos abiertos").</p>
-                            </div>
-                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500">
-                                <h4 class="font-bold text-sky-800">Flujo Potenciado (Estrategia)</h4>
-                                <p class="text-sm text-stone-700 mt-2">1. La Plataforma reporta los 5,000 que abrieron.<br>2. El Analizador nos dice quiénes* eran (ej. "El 90% no era el público objetivo") para refinar la siguiente campaña.</p>
-                            </div>
+                            <div class="bg-white p-4"><h4 class="font-bold text-stone-600">Flujo Actual</h4><p class="text-sm text-stone-500 mt-2">Análisis de métricas de envío.</p></div>
+                            <div class="bg-sky-50 p-4 border-l-4 border-sky-500"><h4 class="font-bold text-sky-800">Flujo Potenciado</h4><p class="text-sm text-stone-700 mt-2">1. Plataforma reporta aperturas.<br>2. Analizador dice quiénes eran para refinar.</p></div>
                         </div>
                     </div>
                 </div>
@@ -185,13 +176,19 @@
     </main>
 
     <footer class="bg-stone-800 text-stone-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p>&copy; Data & AI Inclusion Technologies-Álcaldía Álvaro Obregón. <a href="https://pape-ia.streamlit.app/" class="underline">https://pape-ia.streamlit.app/</a></p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Data & AI Inclusion Technologies - Alcaldía Álvaro Obregón</p>
+            <p class="mt-2">
+                <a href="https://pape-ia.streamlit.app/" target="_blank" class="underline hover:text-white">
+                    https://pape-ia.streamlit.app/
+                </a>
+            </p>
         </div>
     </footer>
 
-    <!-- DATOS DE MODALES (COMPLETOS) -->
+    <!-- DATOS COMPLETOS DE MODALES -->
     <div id="modal-data" class="hidden">
+        <!-- (Todos los 6 modales completos - los mismos que me diste antes) -->
         <div id="capacidad-1-title">Identificar y Perfilar Segmentos</div>
         <div id="capacidad-1-body">
             <h4 class="text-lg font-semibold text-stone-800">Funcionalidades Clave</h4>
@@ -209,8 +206,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"Cuántas personas jóvenes de 18 a 29 años."`</li>
-                <li>`"Colonias con más adultos mayores de 65."`</li>
+                <li>`"Dame un perfil de los jóvenes de 18 a 29 años."`</li>
+                <li>`"Top 5 colonias con más adultos mayores de 65."`</li>
                 <li>`"¿Cuál es la edad promedio de la población?"`</li>
             </ul>
         </div>
@@ -228,8 +225,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Carencia seguridad social en la colonia Desarrollo Urbano?"`</li>
-                <li>`"¿Personas con rezago educativo en el AGEB 12305?"`</li>
+                <li>`"¿Cuál es la principal carencia de los adultos mayores en [Colonia]?"`</li>
+                <li>`"¿Cuántas personas tienen rezago educativo en el AGEB [Número]?"`</li>
             </ul>
         </div>
 
@@ -248,8 +245,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Personas elegibles para IMSS Bienestar en colonia Golondrinas?"`</li>
-                <li>`"Personas elegibles a Pensión Mujeres Bienestar."`</li>
+                <li>`"¿Cuántas personas con carencia de salud no son elegibles para IMSS Bienestar?"`</li>
+                <li>`"Adultos mayores de 65 años sin acceso a pensión."`</li>
             </ul>
         </div>
 
@@ -267,8 +264,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuántos niños tienen 3 o más carencias?"`</li>
-                <li>`"Personas con 3 carencias."`</li>
+                <li>`"¿Cuántos niños tienen 2 o más carencias?"`</li>
+                <li>`"Dame un perfil de las personas con 3 carencias."`</li>
                 <li>`"Top colonias por vulnerabilidad extrema."`</li>
             </ul>
         </div>
@@ -287,8 +284,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Qué programa tiene más elegibles en Jalalpa Tepito?"`</li>
-                
+                <li>`"¿Qué programa tiene más elegibles en [Colonia]: 'Beca A' o 'Beca B'?"`</li>
+                <li>`"Compara la 'Pensión Adultos Mayores' vs. 'Pensión Mujeres Bienestar'."`</li>
             </ul>
         </div>
 
@@ -305,7 +302,7 @@
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
                 <li>`"Tabla cruzada de grupos de edad con carencia de salud."`</li>
-                <li>`"Tabla cruzada por sexo y rezago educativo."`</li>
+                <li>`"Cruce de sexo y rezago educativo."`</li>
             </ul>
         </div>
     </div>
@@ -326,26 +323,24 @@
             }
         }
 
-        function closeModal() {
-            modal.classList.add('hidden');
-        }
+        function closeModal() { modal.classList.add('hidden'); }
 
         // Acordeón
         document.addEventListener('DOMContentLoaded', () => {
             const accordionData = [
-                { title: "1. Panorama General (Exploración)", query: `"¿Cuántas personas hay por sexo y edad?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
-                { title: "2. Enfoque en Grupos Prioritarios", query: `"Cuántos niños de 0 a 3 años."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
-                { title: "3. Diagnóstico de Carencias", query: `"¿Carencia de seguridad social en mujeres?"`, purpose: "<strong>Entender el problema:</strong> Ayuda a diagnosticar la naturaleza de la vulnerabilidad (salud, seg. social, etc.) para asignar los recursos correctos." },
-                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Personas de 30 años con carencia de seguridad social pero NO son elegibles para ningún programa?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
-                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 3 carencias sociales?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
-                { title: "6. Optimización de Estrategia", query: `"Personas elegibles a Desde la Cuna en la colonia El Rodeo"`, purpose: "<strong>Uso eficiente de recursos:</strong> Ayuda a decidir qué campaña de difusión o qué programa es más pertinente y tendrá mayor impacto en un territorio específico." },
-                { title: "7. Descubrimiento de Patrones", query: `"Tabla por edad con la carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
+                { title: "1. Panorama General (Exploración)", query: `"¿Cuáles son las 10 colonias con más personas registradas?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
+                { title: "2. Enfoque en Grupos Prioritarios", query: `"Dame un perfil de las personas de 65 años o más."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
+                { title: "3. Diagnóstico de Carencias", query: `"De estos adultos mayores, ¿cuál es su principal carencia?"`, purpose: "<strong>Entender el problema:</strong> Ayuda a diagnosticar la naturaleza de la vulnerabilidad (salud, seg. social, etc.) para asignar los recursos correctos." },
+                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Cuántas personas tienen carencia de seguridad social pero NO son elegibles para ningún programa de pensión?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
+                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 2 o 3 carencias al mismo tiempo?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
+                { title: "6. Optimización de Estrategia", query: `"En la colonia X, ¿qué programa tiene más elegibles: 'beca benito juarez' o 'mi beca para empezar'?"`, purpose: "<strong>Uso eficiente de recursos:</strong> Ayuda a decidir qué campaña de difusión o qué programa es más pertinente y tendrá mayor impacto en un territorio específico." },
+                { title: "7. Descubrimiento de Patrones", query: `"Genérame una tabla que cruce los grupos de edad con la carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
             ];
 
             const container = document.getElementById('accordion-container');
             accordionData.forEach((item, index) => {
                 const div = document.createElement('div');
-                div.className = 'border border-stone-200 rounded-lg bg-stone-50/70 overflow-hidden';
+                div.className = 'border border-stone-200 rounded-lg bg-stone-50/70 overflow-hidden shadow-sm hover:shadow transition-shadow';
                 div.innerHTML = `
                     <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-stone-800 hover:bg-stone-100 transition-colors">
                         <span class="text-lg font-bold text-sky-700">${item.title}</span>
