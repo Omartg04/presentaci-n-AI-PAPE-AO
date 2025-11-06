@@ -15,42 +15,41 @@
 </head>
 <body class="text-stone-800">
 
-    <!-- HEADER CON 2 LOGOS + BOTÓN -->
-    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 w-full border-b border-stone-200">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo Izquierda: Alcaldía Álvaro Obregón -->
-                <a href="#que-es" class="flex-shrink-0">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Escudo_%C3%81lvaro_Obreg%C3%B3n.svg/800px-Escudo_%C3%81lvaro_Obreg%C3%B3n.svg.png" 
-                         alt="Alcaldía Álvaro Obregón" 
-                         class="h-11 w-auto">
+<!-- HEADER FINAL – LOGOS LOCALES QUE SÍ SE VEN -->
+<header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 w-full border-b border-stone-200">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            
+            <!-- Logo Izquierda: Alcaldía -->
+            <a href="#que-es" class="flex-shrink-0">
+                <img src="./logo-alcaldia.png" 
+                     alt="Alcaldía Álvaro Obregón" 
+                     class="h-12 w-auto max-w-none">
+            </a>
+
+            <!-- Título centrado -->
+            <div class="absolute left-1/2 transform -translate-x-1/2">
+                <a href="#que-es" class="text-xl font-bold text-sky-700 hover:text-sky-800 transition-colors whitespace-nowrap">
+                    Asistente Analítico
                 </a>
-
-                <!-- Título Centrado -->
-                <div class="absolute left-1/2 transform -translate-x-1/2">
-                    <a href="#que-es" class="text-xl font-bold text-sky-700 hover:text-sky-800 transition-colors">
-                        Asistente Analítico
-                    </a>
-                </div>
-
-                <!-- Logo Derecha + Botón -->
-                <div class="flex items-center space-x-4">
-                    <!-- Logo Data & AI -->
-                    <img src="https://via.placeholder.com/38x38/0ea5e9/ffffff?text=AI" 
-                         alt="Data & AI Inclusion Technologies" 
-                         class="h-9 w-9 rounded-full ring-2 ring-sky-200">
-
-                    <!-- Botón Probar el Analizador -->
-                    <a href="https://pape-ia.streamlit.app/" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
-                       class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:shadow-lg transition-all whitespace-nowrap">
-                        Probar el Analizador
-                    </a>
-                </div>
             </div>
-        </nav>
-    </header>
+
+            <!-- Logo derecha + Botón -->
+            <div class="flex items-center space-x-4">
+                <img src="./logo-data-ai.png" 
+                     alt="Data & AI Inclusion Technologies" 
+                     class="h-10 w-10 rounded-full ring-2 ring-sky-200">
+
+                <a href="https://pape-ia.streamlit.app/" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="bg-sky-600 hover:bg-sky-700 text-white font-semibold px-5 py-2.5 rounded-lg text-sm shadow-md hover:shadow-lg transition-all">
+                    Probar el Analizador
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <!-- Modal -->
     <div id="modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden" onclick="closeModal()">
@@ -206,9 +205,9 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"Dame un perfil de los jóvenes de 18 a 29 años."`</li>
-                <li>`"Top 5 colonias con más adultos mayores de 65."`</li>
-                <li>`"¿Cuál es la edad promedio de la población?"`</li>
+                <li>`"Población total."`</li>
+                <li>`"Colonias con más adultos mayores de 65."`</li>
+                <li>`"Población total por sexo y edad"`</li>
             </ul>
         </div>
 
@@ -225,8 +224,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuál es la principal carencia de los adultos mayores en [Colonia]?"`</li>
-                <li>`"¿Cuántas personas tienen rezago educativo en el AGEB [Número]?"`</li>
+                <li>`"¿Personas con Rezago educativo en colonia Desarrollo Urbano?"`</li>
+                <li>`"¿Cuántas personas tienen carencia de salud en el AGEB 11453?"`</li>
             </ul>
         </div>
 
@@ -245,8 +244,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuántas personas con carencia de salud no son elegibles para IMSS Bienestar?"`</li>
-                <li>`"Adultos mayores de 65 años sin acceso a pensión."`</li>
+                <li>`"¿Personas elegibles para IMSS Bienestar?"`</li>
+                <li>`"Adultos mayores de 65 años sin pensión."`</li>
             </ul>
         </div>
 
@@ -264,8 +263,7 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Cuántos niños tienen 2 o más carencias?"`</li>
-                <li>`"Dame un perfil de las personas con 3 carencias."`</li>
+                <li>`"¿Cuántos niños tienen 3 carencias?"`</li>
                 <li>`"Top colonias por vulnerabilidad extrema."`</li>
             </ul>
         </div>
@@ -284,8 +282,8 @@
             </ul>
             <h4 class="text-lg font-semibold text-stone-800 mt-4">Ejemplos de Consultas</h4>
             <ul class="list-disc list-inside text-stone-600 mt-2 space-y-1">
-                <li>`"¿Qué programa tiene más elegibles en [Colonia]: 'Beca A' o 'Beca B'?"`</li>
-                <li>`"Compara la 'Pensión Adultos Mayores' vs. 'Pensión Mujeres Bienestar'."`</li>
+                <li>`"¿Elegibles Beca Rita Cetina?"`</li>
+                <li>`"Niños elegibes para programa Desde la Cuna"`</li>
             </ul>
         </div>
 
@@ -328,13 +326,13 @@
         // Acordeón
         document.addEventListener('DOMContentLoaded', () => {
             const accordionData = [
-                { title: "1. Panorama General (Exploración)", query: `"¿Cuáles son las 10 colonias con más personas registradas?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
-                { title: "2. Enfoque en Grupos Prioritarios", query: `"Dame un perfil de las personas de 65 años o más."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
-                { title: "3. Diagnóstico de Carencias", query: `"De estos adultos mayores, ¿cuál es su principal carencia?"`, purpose: "<strong>Entender el problema:</strong> Ayuda a diagnosticar la naturaleza de la vulnerabilidad (salud, seg. social, etc.) para asignar los recursos correctos." },
-                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Cuántas personas tienen carencia de seguridad social pero NO son elegibles para ningún programa de pensión?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
-                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 2 o 3 carencias al mismo tiempo?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
+                { title: "1. Panorama General (Exploración)", query: `"¿Población total por sexo y edad?"`, purpose: "<strong>Entender el universo:</strong> Permite validar la distribución de la población registrada y enfocar los esfuerzos territoriales iniciales." },
+                { title: "2. Enfoque en Grupos Prioritarios", query: `"Mujeres de 60 a 64 años."`, purpose: "<strong>Focalización de población:</strong> Permite filtrar y perfilar un segmento demográfico clave (adultos mayores) para diseñar acciones específicas." },
+                { title: "3. Diagnóstico de Carencias", query: `"Cuántas con carencia de seguridad social"`, purpose: "<strong>Entender el problema:</strong> Ayuda a diagnosticar la naturaleza de la vulnerabilidad (salud, seg. social, etc.) para asignar los recursos correctos." },
+                { title: "4. Detección de Brecha de Diseño (Crítico)", query: `"¿Cuántas personas tienen carencia de seguridad social no elegibles a Pensión Adultos Mayores?"`, purpose: "<strong>Identificar omisiones:</strong> Encuentra a la población que, aunque tiene la necesidad, queda fuera de las reglas actuales. <strong>Acción:</strong> Proponer ajustes a las reglas del programa." },
+                { title: "5. Priorización por Intensidad", query: `"¿Cuántos niños (0 a 12 años) tienen 3 carencias?"`, purpose: "<strong>Atención a la vulnerabilidad extrema:</strong> Localiza a los individuos más vulnerables (con múltiples carencias) para una atención prioritaria e integral." },
                 { title: "6. Optimización de Estrategia", query: `"En la colonia X, ¿qué programa tiene más elegibles: 'beca benito juarez' o 'mi beca para empezar'?"`, purpose: "<strong>Uso eficiente de recursos:</strong> Ayuda a decidir qué campaña de difusión o qué programa es más pertinente y tendrá mayor impacto en un territorio específico." },
-                { title: "7. Descubrimiento de Patrones", query: `"Genérame una tabla que cruce los grupos de edad con la carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
+                { title: "7. Descubrimiento de Patrones", query: `"Tabla que cruce edad y sexo con carencia de salud."`, purpose: "<strong>Justificar la focalización:</strong> Encuentra patrones ocultos (ej. \"la carencia de salud se dispara después de los 60 años\") para sustentar el diseño de programas." }
             ];
 
             const container = document.getElementById('accordion-container');
